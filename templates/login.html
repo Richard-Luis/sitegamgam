@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../arquivo-css/login.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 <body>
     <main id="main-login">
         <div class="container-login">
-            <form action="" class="form-login">
+            <form action="/login" method="POST" class="form-login">
                 <h1 class="h1-login">Login</h1>
                     <div><label for="">E-mail</label>
                     <input type="text" placeholder="Entrar com e-mail">
@@ -24,10 +24,10 @@
 
                     <button class="button-login">Login</button>
 
-                    <p class="login-p">Não possui cadastro ? <a href="../cadastro-login/cadastro.html" class="login-a">Cadastrar</a></p>
+                    <p class="login-p">Não possui cadastro ? <a href="{{ url_for('index') }}" class="login-a">Cadastrar</a></p>
         </div>
         </form>
     </main>
 </body>
-    <script src="../js/olho.js"></script>
+    <script src="{{url_for('static', filename='js/olho.js')}}"></script>
 </html>

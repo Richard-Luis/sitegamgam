@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: url('../imagens/Banner-gamgam.png');
+    background-image: url('../static/imagens/Banner-gamgam.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -104,6 +104,7 @@ p.cadastro-p{
 
 .label-senha i:hover {
     color: #fff;
+}
 
 #mostrarsenha{
     position: absolute;
@@ -119,4 +120,9 @@ p.cadastro-p{
 #errosenha{
     color: red;
     font-size: 12px;
+}
+
+#regras-senha{
+    list-style: none;
+    padding-bottom: 10px;
 }

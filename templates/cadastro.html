@@ -3,38 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../arquivo-css/cadastro.css">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='cadastro.css')}}">
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 <body>
     <main id="main-cadastro">
         <div class="container-cadastro">
             <h1 class="h1-cadastro">Cadastro</h1>
-            <form action="">
+            <form action="/cadastro" method="POST">
                 <div class="label-nome">
                 <label for="">Nome</label>
-                <input type="text" placeholder="Nome do usuário">
+                <input type="text" name="nome" placeholder="Nome do usuário">
                 </div>
 
                 <div class="label-email">
                 <label for="">E-mail</label>
-                <input type="email" placeholder="Digite seu e-mail">
+                <input type="email" name="email" placeholder="Digite seu e-mail">
                 </div>
 
                 <div class="label-senha">
                 <label for="senha">Senha</label>
-                <input type="password" id="senha" placeholder="Senha">
-                <i id="mostrarsenha" class="fa-solid fa-eye"></i>
+                <input type="password" id="senha" name="senha" placeholder="Senha">
+                <i id="mostrarsenha" name="senha" class="fa-solid fa-eye"></i>
                 <p id="errosenha"></p>
                 </div>
 
+                <ul id="regras-senha">
+                    <li id="minimo"> Pelo menos 8 caracteres</li>
+                    <li id="maiuscula"> Uma letra maiúscula</li>
+                    <li id="numero"> Um número</li>
+                    <li id="especial"> Um caractere especial</li>
+                </ul>
+
                 <button id="btncadastro">Cadastrar</button>
 
-                <p class="cadastro-p">Já possui uma conta ? <a class="cadastro-a" href="../cadastro-login/login.html">Login</a></p>
+                <p class="cadastro-p">Já possui uma conta ? <a class="cadastro-a" href="{{ url_for('login_page') }}">Login</a></p>
             </form>
         </div>
     </main>
 </body>
-    <script src="../js/olho.js"></script>
+    <script src="{{url_for('static', filename='js/olho.js')}}"></script>
 </html>
