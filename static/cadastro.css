@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: url('../imagens/Banner-gamgam.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.h1-cadastro{
+    color: azure;
+}
+
+#main-cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-cadastro{
+    width: 350px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 20px rgba(140, 0, 255, 0.4);
+    color: white;
+}
+
+.container-cadastro input{
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    outline: none;
+}
+
+.container-cadastro input::placeholder{
+    color: rgba(255,255,255,0.6);
+}
+
+.container-cadastro button:hover{
+    background: #9d4dff;
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #7b2cff;
+}
+
+.container-cadastro h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+#btncadastro{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #7b2cff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+p.cadastro-p{
+    padding-top: 10px;
+}
+
+.cadastro-a{
+    color: #7b2cff;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.label-senha {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-senha i {
+    position: absolute;
+    right: 10px;
+    top: 5px; /* move o ícone para cima */
+    right: -20px;
+    cursor: pointer;
+    color: rgba(255,255,255,0.6);
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+.label-senha i:hover {
+    color: #fff;
+
+#mostrarsenha{
+    position: absolute;
+    right: 12px;
+    top:50%;
+    transform: translatey(-50%);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+#errosenha{
+    color: red;
+    font-size: 12px;
+}
